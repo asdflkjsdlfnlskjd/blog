@@ -9,5 +9,5 @@ class Category extends Model
 {
 
     protected $table = 'categories';
-    protected $quarded = false;
+    protected $guarded = false;
 }
