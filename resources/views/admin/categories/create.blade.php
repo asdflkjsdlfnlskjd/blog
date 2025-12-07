@@ -35,6 +35,7 @@
                             <div class="text-danger">Это поле необходимо для заполнения</div>
                         @enderror
                         <input type="submit" class="btn btn-primary" value="Добавить">
+
                     </form>
                 </div>
                 <!-- ./col -->
