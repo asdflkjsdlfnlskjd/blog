@@ -8,7 +8,12 @@
             <div class="row mb-2">
                 <div class="col-sm-6 d-flex align-items-center">
                     <h1 class="m-0 mr-2">{{$category->title}}</h1>
-                    <td><a href="{{route('admin.category.edit', $category->id)}}" class="text-success" ><i class="fas fa-pencil-alt"></i></a></td>
+                    <td><a href="{{route('admin.category.edit', $category->id)}}" class="text-success" ><i class="fas fa-pencil-alt"></i></a><form method="POST" action="{{route('admin.category.delete', $category->id)}}">
+                            @csrf
+                            @method('DELETE')
+                            <button class="border-0 bg-transparent" type="submit" > <i class="fas fa-trash text-danger" role="button" ></i>
+                            </button>
+                        </form></td>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
