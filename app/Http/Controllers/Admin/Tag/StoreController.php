@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Category;
+namespace App\Http\Controllers\Admin\Tag;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\Category\StoreRequest;
+
+use App\Http\Requests\Admin\Tag\StoreRequest;
 use App\Models\Category;
+use App\Models\Tag;
 use function Laravel\Prompts\error;
 
 class StoreController extends Controller
@@ -12,7 +14,7 @@ class StoreController extends Controller
     public function __invoke(StoreRequest $request)
     {
         $data = $request->validated();
-        Category::firstOrCreate($data);
-        return redirect()->route('admin.category.index');
+        Tag::firstOrCreate($data);
+        return redirect()->route('admin.tag.index');
     }
 }

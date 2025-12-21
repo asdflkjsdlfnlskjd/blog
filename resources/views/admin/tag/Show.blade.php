@@ -7,8 +7,8 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6 d-flex align-items-center">
-                    <h1 class="m-0 mr-2">{{$category->title}}</h1>
-                    <td><a href="{{route('admin.category.edit', $category->id)}}" class="text-success" ><i class="fas fa-pencil-alt"></i></a><form method="POST" action="{{route('admin.category.delete', $category->id)}}">
+                    <h1 class="m-0 mr-2">{{$tag->title}}</h1>
+                    <td><a href="{{route('admin.tag.edit', $tag->id)}}" class="text-success" ><i class="fas fa-pencil-alt"></i></a><form method="POST" action="{{route('admin.tag.delete', $tag->id)}}">
                             @csrf
                             @method('DELETE')
                             <button class="border-0 bg-transparent" type="submit" > <i class="fas fa-trash text-danger" role="button" ></i>
@@ -36,12 +36,12 @@
                         <table class="table table-hover text-nowrap">
                             <tbody>
                             <tr>
-                                <td>{{$category->id}}</td>
+                                <td>{{$tag->id}}</td>
                                 <td><a href="#"><i class="far fa-eye"></i></a></td>
                             </tr>
                             <tr>
                                 <td>Название</td>
-                                <td>{{$category->title}}</td>
+                                <td>{{$tag->title}}</td>
                             </tr>
                             </tbody>
                             </tbody>
